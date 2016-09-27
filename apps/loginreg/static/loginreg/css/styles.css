@@ -1,0 +1,72 @@
+body {
+  font-family: sans-serif;
+}
+
+.messages {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.messages .error {
+  background: #f33;
+}
+
+.messages .success {
+  background: #3f3;
+}
+
+header {
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+#title {
+  display: inline-block;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+#loginreg {
+  width:95%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#register, #login {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  padding: 1em;
+  border: 1px solid #000;
+}
+
+#login {
+  float: right;
+}
+
+form label {
+  display: block;
+  margin-top:.5em;
+}
+
+form input {
+  width: 100%;
+  padding: .25em;
+}
+
+form input[type='submit'] {
+  font-size: 1.15em;
+  font-weight: bold;
+  padding: .5em;
+  margin-top: 1em;
+}
+
+@media (min-width: 500px) {
+  #register, #login {
+    width: 49%;
+  }
+}

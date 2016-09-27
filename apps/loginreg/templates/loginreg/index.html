@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+  <link rel='stylesheet' href='{% static "loginreg/css/undohtml.css" %}' />
+  <link rel='stylesheet' href='{% static "loginreg/css/styles.css" %}' />
+  <title>Welcome</title>
+</head>
+<body>
+  <header>
+    <div id='title'>Welcome!</div>
+  </header>
+  {% if messages %}
+  <ul class='messages'>
+    {% for message in messages %}
+    <li {% if message.tags %}class='{{message.tags}}'{% endif %}>{{message}}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <main id='loginreg'>
+    <div id='register'>
+      <h2>Register</h2>
+      <form action='{% url "login:register" %}' method='post'>
+        {% csrf_token %}
+        <label for='reg_name'>Name:</label><input type='text' id='reg_name' name='name'/>
+        <label for='reg_username'>Username:</label><input type='text' id='reg_username' name='username'/>
+        <label for='reg_password'>Password:</label><input type='password' id='reg_password' name='password'/>
+        <label for='reg_confirmation'>Confirmation:</label><input type='password' id='reg_confirmation' name='confirmation'/>
+        <label for='reg_date_hired'>Date Hired:</label><input type='date' id='reg_date_hired' name='date_hired' value='{{today}}' max='{{today}}'/>
+        <input type='submit' value='Register'/>
+      </form>
+    </div>
+    <div id='login'>
+      <h2>Login</h2>
+      <form action='{% url "login:login" %}' method='post'>
+        {% csrf_token %}
+        <label for='log_username'>Username:</label><input type='text' id='log_username' name='username'/>
+        <label for='log_password'>Password:</label><input type='password' id='log_password' name='password'/>
+        <input type='submit' value='Login'/>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
