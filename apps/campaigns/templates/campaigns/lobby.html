@@ -6,7 +6,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			
+
 		</div>
 
 		<div id="sitecontent">
@@ -25,17 +25,17 @@
 						<th>Date Created</th>
 						<th>Game Status</th>
 						<th>GM Name</th>
-						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
+					{% for campaign in campaigns %}
 					<tr>
-						<td>Some Name</td>
-						<td>Some Date</td>
+						<td>{{campaign.name}}</td>
+						<td>{{campaign.created_at}}</td>
 						<td>DM</td>
 						<td>Some status</td>
-						<td>.</td>
 					</tr>
+					{% endfor %}
 				</tbody>
 			</table>
 		</div>
