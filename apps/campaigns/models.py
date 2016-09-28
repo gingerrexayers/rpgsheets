@@ -6,3 +6,4 @@ from django.db import models
 class Campaign(models.model):
     name = models.CharField(max_length=255)
     game_master = models.ForeignKey(User, related_name='campaigns')
+    players = models.ManyToManyField(User, related_name='active_games')
