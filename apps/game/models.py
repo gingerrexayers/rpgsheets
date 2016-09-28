@@ -31,6 +31,7 @@ class Character(models.model):
 
 class Item(models.Model):
 	name = models.CharField(max_length=255)
+    description = models.TextField(max_length=1000)
 	itemType = models.CharField(max_length=255)
 	rarity = models.CharField(max_length=255)
 	value = models.IntegerField()
