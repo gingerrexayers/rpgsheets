@@ -6,14 +6,17 @@ from ..campaigns.models import Campaign
 # Create your models here.
 
 class Character(models.model):
+    ### META ###
     campaign = models.ForeignKey(Campaign, related_name='characters')
     user = models.ForeignKey(User)
+    ### INFO ###
     name = models.CharField(max_length=255)
     alignment = models.CharField(max_length=255)
     race = models.CharField(max_length=255)
     char_class = models.CharField(max_length=255)
     level = models.IntegerField(default=1)
     exp = models.IntegerField(default=0)
+    ### STATS ###
 	curr_hp = models.IntegerField()
     max_hp = models.IntegerField()
     damage = models.IntegerField()
