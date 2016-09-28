@@ -31,3 +31,4 @@ class Campaign(models.Model):
     players = models.ManyToManyField(User, related_name='active_games')
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
+    manager = CampaignManager()
