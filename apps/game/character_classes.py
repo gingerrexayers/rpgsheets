@@ -191,6 +191,38 @@ class Characterclass() = {
                 'description':''''''
             },
         }
+    },
+    'inventory':{
+        'slot1':{
+            'item':'',
+            'type':'',
+            'qty':0,
+            'weight':1
+        },
+        'slot2':{
+            'item':'',
+            'type':'',
+            'qty':0,
+            'weight':1
+        },
+        'slot3':{
+            'item':'',
+            'type':'',
+            'qty':0,
+            'weight':1
+        },
+        'slot4':{
+            'item':'',
+            'type':'',
+            'qty':0,
+            'weight':1
+        },
+        'slot5':{
+            'item':'',
+            'type':'',
+            'qty':0,
+            'weight':1
+        }
     }
     
 }
@@ -382,6 +414,37 @@ class Barbarian() = {
                 'description':'''You are initiated in the old ways, the ways of sacrifice. Choose something your gods (or the ancestor spirits, or your totem, etc) value—gold, blood, bones or the like. When you sacrifice those things as per your rites and rituals, roll+WIS. • On a 10+ the GM will grant you insight into your current trouble or a boon to help you. • On a 7-9 the sacrifice is not enough and your gods take of your flesh as well, but still grant you some insight or boon. • On a miss, you earn the ire of the fickle spirits.'''
             }
         }
+    },
+    'inventory':{
+        'slot1':{
+            'item':'Dungeon Rations',
+            'type':'food',
+            'qty':5,
+            'weight':1
+        },
+        'slot2':{
+            'item':'Dagger',
+            'type':'weapon',
+            'qty':1,
+            'weight':12
+        },
+        'slot3':{
+            'item':'Axe',
+            'type':'weapon',
+            'qty':1,
+            'weight':1
+        },
+        'slot4':{
+            'item':'Two-handed Sword',
+            'type':'weapon',
+            'qty':1,
+            'weight':2
+        },
+        'slot5':{
+            'item':'Chanmail',
+            'type':'armor',
+            'qty':1,
+            'weight':1
+        }
     }
-    
 }
